@@ -8,7 +8,8 @@ App = {
   },
   contracts: {},
   elements: {
-    betBtn: $('.btn-bet-js'),
+    abcBtn: $('.btn-abc'),
+    participateBtn: $('.btn-participate-js'),
     test1Btn: $('.btn-test1-js'),
     test2Btn: $('.btn-test2-js'),
 
@@ -59,26 +60,60 @@ App = {
     App.account = App.web3.eth.accounts[0];
   },
   bindEvents: function(){
-    App.elements.betBtn.on('click', App.participate);
+    App.elements.abcBtn.on('click', App.abcd);
+    App.elements.participateBtn.on('click', App.getResults);
     App.elements.test1Btn.on('click', App.test1js);
     App.elements.test2Btn.on('click', App.test2js);
 
   },
-  participate: function(e){
-    App.contractInstance.getBet(
-      { from: App.account,
-        value: App.web3.toWei(0.1, "ether")
-      }).then(function(addr){
-        App.contractInstance.getBalance
-        .call()
-        .then(function(balance){
-          console.log(App.web3.fromWei(balance.toString(), 'ether'));
-          App.elements.balanceText.html(App.web3.fromWei(balance.toString(), 'ether'));
-        }) 
-        .catch(function(error){ console.log(error); });
-      })
-        .catch(function(error){ console.log(error); });
-  },  
+  participate: function() {
+    var gR = 11001100110011001100110011001100;
+    var a = 111;
+    var b = 3151719212325;
+    var c = 2729313335373;
+    var d = 9411115192327;
+    var e = 3135391119272;
+    var f = 7351127193911;
+    App.contractInstance.getBet(gR, a, b, c, d, e, f);
+    
+  }, 
+  getResults: function() {  
+    /*var gR = 11001100110011001100110011001100;
+    var a = 111;
+    var b = 3151719212325;
+    var c = 2729313335373;
+    var d = 9411115192327;
+    var e = 3135391119272;
+    var f = 7351127193911;*/
+    var gR = 1;
+    var a = 1;
+    var b = 1;
+    var c = 1;
+    var d = 1;
+    var e = 1;
+    var f=1;
+    App.contractInstance.getResults(gR, a, b, c, d, e, f);
+  }, 
+
+  abcd: function() {  
+    /*var gR = 11001100110011001100110011001100;
+    var a = 111;
+    var b = 3151719212325;
+    var c = 2729313335373;
+    var d = 9411115192327;
+    var e = 3135391119272;
+    var f = 7351127193911;*/
+    var gR = 1;
+    var a = 0.000000000001;
+    var b = 0.000000000001;
+    var c = 0.000000000001;
+    var d = 0.000000000001;
+    var e = 0.000000000001;
+    var f = 1;
+    App.contractInstance.abc(a, b, c, d, e, f)
+    .then(function(aabb){ console.log(aabb.toLocaleString())})
+    .catch(function(error){ console.log(error); });;
+  }, 
   test1js: function(){
     App.contractInstance.test1(
       ).then(function(test1Var){ console.log(test1Var.toLocaleString())})
