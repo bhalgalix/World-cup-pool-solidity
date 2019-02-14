@@ -6,7 +6,7 @@ The group results is a series of 1(qualified) or 0(not) depending if the team qu
 
 For the rest of rounds each team will have a number. The results will be in another series that will be all the team qualified, and the function will compare oach series of every player with the World Cup result series.
 
-Example:
+<h3>Example:</h3>
 
 11. Brazil
 12. Germany
