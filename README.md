@@ -21,7 +21,7 @@ For the rest of rounds each team will have a number. The results will be in anot
 18. Spain
 
 In this example we have 8 teams, each pair will play each other to see who advance to the next round 
-the series to this stage will be: 1112131415161718 (the teams that classified from group stage)
+the series to this stage will be: 11 12 13 14 15 16 17 18 (the teams that classified from group stage)(without spaces)
 
 12. Germany
 13. Panama
