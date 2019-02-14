@@ -1,4 +1,4 @@
-Pool App
+<h1>Pool App</h1>
 
 This is a pool for the FIFA world cup in solidity using rinkeby as the Test net, truffle for the compilation, metamask for the wallets.
 
